@@ -1,10 +1,17 @@
 
-resource "aws_instance" "MyFirstInstnace" {
+provider "aws" {
+    version    = "3.53.0"
+    access_key = "AKIARHMMEFHCDT4PXNEE"
+    secret_key = "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"
+    region     = "eu-west-3"
+}
+
+resource "aws_instance" "MyFirstInstance" {
   count         = 3
-  ami           = "ami-0bff25b43a4479334"
-  instance_type = "t4g.micro"
+  ami           = "ami-01b32e912c60acdfa"
+  instance_type = "t3.micro"
 
   tags = {
-    Name = "demoinstnce-${count.index}"
+    Name = "demo-instance-${count.index}"
   }
 }
