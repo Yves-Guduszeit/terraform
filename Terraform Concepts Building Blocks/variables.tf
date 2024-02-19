@@ -8,7 +8,7 @@ variable "AWS_REGION" {
 
 variable "Security_Group"{
   type = list
-  default = ["sg-050fa3a003526f8f6"]
+  default = ["sg-050fa3a003526f8f6", "sg-031dfcf0db609dd05"]
 }
 
 variable "AMIS" {
